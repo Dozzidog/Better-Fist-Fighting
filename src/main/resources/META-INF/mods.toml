@@ -6,19 +6,19 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="${loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="MIT"
 # A URL to refer people to when problems occur with this mod
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/Dozzidog/Better-Fist-Fighting/issues" #optional
 # If your mod is purely client-side and has no multiplayer functionality (be it dedicated servers or Open to LAN),
 # set this to true, and Forge will set the correct displayTest for you and skip loading your mod on dedicated servers.
 #clientSideOnly=true #optional - defaults to false if absent
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="${mod_id}" #mandatory
+modId="betterfistfighting" #mandatory
 # The version number of the mod
 version="${mod_version}" #mandatory
 # A display name for the mod
@@ -52,13 +52,13 @@ description='''
 A mod that adds fist fighting from the Indiana Jones movie franchises.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.${mod_id}]] #optional
+[[dependencies.betterfistfighting]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="${forge_version_range}" #mandatory
+    versionRange="[47,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the dependency is not mandatory
     # BEFORE - This mod is loaded BEFORE the dependency
     # AFTER - This mod is loaded AFTER the dependency
@@ -66,11 +66,11 @@ A mod that adds fist fighting from the Indiana Jones movie franchises.
     # Side this dependency is applied on - BOTH, CLIENT, or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.${mod_id}]]
+[[dependencies.betterfistfighting]]
     modId="minecraft"
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="${minecraft_version_range}"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
